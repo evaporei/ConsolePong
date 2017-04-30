@@ -5,7 +5,6 @@
 
 Ball::Ball(int posX, int posY) : originalX(posX), originalY(posY), x(posX), y(posY), direction(STOP)
 {
-	// direction = STOP;
 }
 
 void Ball::reset()
@@ -54,18 +53,18 @@ void Ball::move()
 		break;
 	case UP_LEFT:
 		x--;
-		y++;
+		y--;
 		break;
 	case DOWN_LEFT:
-		x++;
-		y--;
-	case UP_RIGHT:
 		x--;
 		y++;
+	case UP_RIGHT:
+		x++;
+		y--;
 		break;
 	case DOWN_RIGHT:
-		x--;
-		y--;
+		x++;
+		y++;
 		break;
 	default:
 		break;
